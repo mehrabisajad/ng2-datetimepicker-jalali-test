@@ -1,3 +1,138 @@
-<h1>
-  {{title}}
-</h1>
+<div class="jumbotron">
+  <div class="container">
+    <h1>DateTimePicker</h1>
+    <div class="row">
+      <ng2-datetimepicker [(ngModel)]="dateTime" class="form-control col-md-4 offset-md-4"
+                          dir="rtl"></ng2-datetimepicker>
+    </div>
+    <a style="text-align: center;" href="http://mehrabisajad.ir"><h1>Sajad Mehrabi</h1></a>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">حالت چپ به راست</div>
+        </div>
+        <div class="card-block">
+          <ng2-datetimepicker [(ngModel)]="dateTimeLtr" dir="ltr"></ng2-datetimepicker>
+          <br>
+          <div class="card" *ngIf="dateTimeLtr">
+            <div class="card-block">
+              {{dateTimeLtr}}<br>{{dateTimeLtr|dateTimeJalali}}
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          {{strDateTimeLtr}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" dir="rtl">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">حالت راست به چپ</div>
+        </div>
+        <div class="card-block">
+          <ng2-datetimepicker [(ngModel)]="dateTimeRtl" dir="rtl"></ng2-datetimepicker>
+          <br>
+          <div class="card" *ngIf="dateTimeRtl">
+            <div class="card-block">
+              {{dateTimeRtl}}<br>{{dateTimeRtl|dateTimeJalali}}
+            </div>
+          </div>
+        </div>
+        <div class="card-footer" dir="ltr">
+          {{strDateTimeRtl}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">حالت چپ به راست</div>
+        </div>
+        <div class="card-block">
+          <ng2-datetimepicker [disableTime]="true" [(ngModel)]="dateLtr" dir="ltr"></ng2-datetimepicker>
+          <br>
+          <div class="card" *ngIf="dateLtr">
+            <div class="card-block">
+              {{dateLtr}}<br>{{dateLtr|dateTimeJalali}}
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          {{strDateLtr}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" dir="rtl">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">حالت راست به چپ</div>
+        </div>
+        <div class="card-block">
+          <ng2-datetimepicker [disableTime]="true" [(ngModel)]="dateRtl" dir="rtl"></ng2-datetimepicker>
+          <br>
+          <div class="card" *ngIf="dateRtl">
+            <div class="card-block">
+              {{dateRtl}}<br>{{dateRtl|dateTimeJalali}}
+            </div>
+          </div>
+        </div>
+        <div class="card-footer" dir="ltr">
+          {{strDateRtl}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">حالت چپ به راست</div>
+        </div>
+        <div class="card-block">
+          <ng2-datetimepicker [disabled]="true" [disableTime]="true" [(ngModel)]="dateLtr"
+                              dir="ltr"></ng2-datetimepicker>
+          <br>
+          <div class="card" *ngIf="dateLtr">
+            <div class="card-block">
+              {{dateLtr}}<br>{{dateLtr|dateTimeJalali}}
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          {{strDateDisabledLtr}}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6" dir="rtl">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">حالت راست به چپ</div>
+        </div>
+        <div class="card-block">
+          <ng2-datetimepicker [disabled]="true" [disableTime]="true" [(ngModel)]="dateRtl"
+                              dir="rtl"></ng2-datetimepicker>
+          <br>
+          <div class="card" *ngIf="dateRtl">
+            <div class="card-block">
+              {{dateRtl}}<br>{{dateRtl|dateTimeJalali}}
+            </div>
+          </div>
+        </div>
+        <div class="card-footer" dir="ltr">
+          {{strDateDisabledRtl}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
