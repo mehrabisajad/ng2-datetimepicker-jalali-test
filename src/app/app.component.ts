@@ -23,4 +23,6 @@ export class AppComponent {
   strDateDisabledLtr = '<ng2-datetimepicker [disabled]="true" [disableTime]="true" [(ngModel)]="dateTimeLtr" dir="ltr"></ng2-datetimepicker>';
   strDateDisabledRtl = '<ng2-datetimepicker [disabled]="true" [disableTime]="true" [(ngModel)]="dateTimeRtl" dir="rtl"></ng2-datetimepicker>';
 
+  date2Ltr;
+  strDate2Ltr = '<ng2-datetimepicker [displayMonths]="2" [(ngModel)]="date2Ltr" dir="ltr"></ng2-datetimepicker>';
 }

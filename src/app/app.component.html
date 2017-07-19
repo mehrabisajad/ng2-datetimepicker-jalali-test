@@ -132,6 +132,28 @@
         </div>
       </div>
     </div>
+  </div>  <br/>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">حالت چند ماهی کنار هم</div>
+        </div>
+        <div class="card-block">
+          <ng2-datetimepicker [displayMonths]="2" [(ngModel)]="date2Ltr"
+                              dir="ltr"></ng2-datetimepicker>
+          <br>
+          <div class="card" *ngIf="dateLtr">
+            <div class="card-block">
+              {{date2Ltr}}<br>{{date2Ltr|dateTimeJalali}}
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          {{strDate2Ltr}}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
